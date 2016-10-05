@@ -69,6 +69,25 @@ public class WordManager : MonoBehaviour {
 	#endregion
 
 
+	#region Especiales
+	public GameObject a_Acento_Minuscula_Prefab;
+	public GameObject e_Acento_Minuscula_Prefab;
+	public GameObject i_Acento_Minuscula_Prefab;
+	public GameObject o_Acento_Minuscula_Prefab;
+	public GameObject u_Acento_Minuscula_Prefab;
+	public GameObject u_Dieresis_Minuscula_Prefab;
+	public GameObject nie_Minuscula_Prefab;
+
+	public GameObject A_Acento_Mayuscula_Prefab;
+	public GameObject E_Acento_Mayuscula_Prefab;
+	public GameObject I_Acento_Mayuscula_Prefab;
+	public GameObject O_Acento_Mayuscula_Prefab;
+	public GameObject U_Acento_Mayuscula_Prefab;
+	public GameObject u_Dieresis_Mayuscula_Prefab;
+	public GameObject Nie_Mayuscula_Prefab;
+
+	#endregion
+
 	void Awake()
 	{
 		positions = gameObject.GetComponentsInChildren<LetterPosition>();
@@ -256,6 +275,54 @@ public class WordManager : MonoBehaviour {
 						builtWord.Add(z_Minuscula_Prefab);
 						break;
 
+				case 'á':
+					builtWord.Add(a_Acento_Minuscula_Prefab);
+					break;
+				case 'é':
+					builtWord.Add(e_Acento_Minuscula_Prefab);
+					break;
+				case 'í':
+					builtWord.Add(i_Acento_Minuscula_Prefab);
+					break;
+				case 'ó':
+					builtWord.Add(o_Acento_Minuscula_Prefab);
+					break;
+				case 'ú':
+					builtWord.Add(u_Acento_Minuscula_Prefab);
+					break;
+
+
+				case 'Á':
+					builtWord.Add(A_Acento_Mayuscula_Prefab);
+					break;
+				case 'É':
+					builtWord.Add(E_Acento_Mayuscula_Prefab);
+					break;
+				case 'Í':
+					builtWord.Add(I_Acento_Mayuscula_Prefab);
+					break;
+				case 'Ó':
+					builtWord.Add(O_Acento_Mayuscula_Prefab);
+					break;
+				case 'Ú':
+					builtWord.Add(U_Acento_Mayuscula_Prefab);
+					break;
+
+				case 'ü':
+					builtWord.Add(u_Dieresis_Minuscula_Prefab);
+					break;
+
+				case 'Ü':
+					builtWord.Add(u_Dieresis_Mayuscula_Prefab);
+					break;
+
+				case 'ñ':
+					builtWord.Add(nie_Minuscula_Prefab);
+					break;
+
+				case 'Ñ':
+					builtWord.Add(Nie_Mayuscula_Prefab);
+					break;
 
 
 				default:
@@ -277,12 +344,13 @@ public class WordManager : MonoBehaviour {
 
 	void CleanupPositions()
 	{
+		
 		foreach(LetterPosition lp in positions)
 		{
-			GameObject l = lp.transform.GetComponentInChildren<Letra>().gameObject;
+			Letra l = lp.transform.GetComponentInChildren<Letra> ();
 
-
-			if(l) Destroy(l);
+			if(l) 
+					Destroy(l.gameObject);
 		}
 	}
 
