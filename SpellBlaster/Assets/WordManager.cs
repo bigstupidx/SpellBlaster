@@ -268,7 +268,7 @@ public class WordManager : MonoBehaviour {
 		int i = 0;
 		foreach(GameObject letter in builtWord)
 		{
-			Instantiate(letter, letter.transform.position, letter.transform.rotation, positions[i].transform);
+			Instantiate(letter, letter.transform.position, Quaternion.identity, positions[i].transform);
 			i++;
 		}
 
