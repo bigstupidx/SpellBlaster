@@ -1,0 +1,16 @@
+<Diccionario>
+        <Palabra Idioma='es-MX' Dificultad='1'>
+            <Titulo>absence</Titulo>
+            <Opciones>
+                <Opcion1>absense</Opcion1>
+                <Opcion2>absance</Opcion2>
+            </Opciones>
+        </Palabra>
+		<Palabra Idioma='es-MX' Dificultad='1'>
+            <Titulo>absence</Titulo>
+            <Opciones>
+                <Opcion1>absense</Opcion1>
+                <Opcion2>absance</Opcion2>
+            </Opciones>
+        </Palabra>
+ </Diccionario>
