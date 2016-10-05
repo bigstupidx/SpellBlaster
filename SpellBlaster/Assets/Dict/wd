@@ -1,13 +1,13 @@
 <Diccionario>
         <Palabra Idioma='es-MX' Dificultad='1'>
-            <Titulo>Absence</Titulo>
+            <Titulo>Don Chingón</Titulo>
             <Opciones>
                 <Opcion1>absense</Opcion1>
                 <Opcion2>absance</Opcion2>
             </Opciones>
         </Palabra>
 		<Palabra Idioma='es-MX' Dificultad='1'>
-            <Titulo>Escence</Titulo>
+            <Titulo>Esconce</Titulo>
             <Opciones>
                 <Opcion1>absense</Opcion1>
                 <Opcion2>absance</Opcion2>
