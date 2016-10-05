@@ -8,10 +8,13 @@ using System.IO;
 
 public class GameManager : MonoBehaviour {
 
+
+	public WordManager wordManager;
 	// Use this for initialization
 	void Start () {
 	
 		InicializarDiccionario ();
+
 	}
 	
 	// Update is called once per frame
@@ -27,7 +30,7 @@ public class GameManager : MonoBehaviour {
 		
 		StringBuilder output = new StringBuilder();
 
-		String xmlString = System.IO.File.ReadAllText(@"Assets\Dict\wd");
+		String xmlString = System.IO.File.ReadAllText(@"Assets/Dict/wd");
 
 
 		// Create an XmlReader
@@ -39,7 +42,13 @@ public class GameManager : MonoBehaviour {
 			output.AppendLine("Dificultad: " + dificultad);
 
 			reader.ReadToFollowing("Titulo");
-			output.AppendLine("Palabra: " + reader.ReadElementContentAsString());
+
+			string palabra = reader.ReadElementContentAsString();
+
+			output.AppendLine("Palabra: " + palabra);
+
+
+			wordManager.SetWordInPlay(palabra);
 		}
 
 		Debug.Log (output.ToString());
