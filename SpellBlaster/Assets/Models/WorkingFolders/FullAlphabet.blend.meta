@@ -76,6 +76,17 @@ ModelImporter:
     100136: yMinus
     100138: ZMayus
     100140: zMinus
+    100142: Nbr0
+    100144: Nbr1
+    100146: Nbr2
+    100148: Nbr3
+    100150: Nbr4
+    100152: Nbr5
+    100154: Nbr6
+    100156: Nbr7
+    100158: Nbr8
+    100160: Nbr9
+    100162: Numeros
     400000: AAcentoMayus
     400002: aAcentoMinus
     400004: AAMayusculas
@@ -147,6 +158,17 @@ ModelImporter:
     400136: yMinus
     400138: ZMayus
     400140: zMinus
+    400142: Nbr0
+    400144: Nbr1
+    400146: Nbr2
+    400148: Nbr3
+    400150: Nbr4
+    400152: Nbr5
+    400154: Nbr6
+    400156: Nbr7
+    400158: Nbr8
+    400160: Nbr9
+    400162: Numeros
     2300000: AAcentoMayus
     2300002: aAcentoMinus
     2300004: AMayus
@@ -213,6 +235,16 @@ ModelImporter:
     2300126: yMinus
     2300128: ZMayus
     2300130: zMinus
+    2300132: Nbr0
+    2300134: Nbr1
+    2300136: Nbr2
+    2300138: Nbr3
+    2300140: Nbr4
+    2300142: Nbr5
+    2300144: Nbr6
+    2300146: Nbr7
+    2300148: Nbr8
+    2300150: Nbr9
     3300000: AAcentoMayus
     3300002: aAcentoMinus
     3300004: AMayus
@@ -279,6 +311,16 @@ ModelImporter:
     3300126: yMinus
     3300128: ZMayus
     3300130: zMinus
+    3300132: Nbr0
+    3300134: Nbr1
+    3300136: Nbr2
+    3300138: Nbr3
+    3300140: Nbr4
+    3300142: Nbr5
+    3300144: Nbr6
+    3300146: Nbr7
+    3300148: Nbr8
+    3300150: Nbr9
     4300000: aAcentoMinus
     4300002: eAcentoMinus
     4300004: iAcentoMinus
@@ -345,6 +387,16 @@ ModelImporter:
     4300126: XMauys
     4300128: YMayus
     4300130: ZMayus
+    4300132: Nbr9
+    4300134: Nbr8
+    4300136: Nbr7
+    4300138: Nbr6
+    4300140: Nbr5
+    4300142: Nbr4
+    4300144: Nbr3
+    4300146: Nbr2
+    4300148: Nbr1
+    4300150: Nbr0
     7400000: Default Take
     9500000: //RootNode
   materials:

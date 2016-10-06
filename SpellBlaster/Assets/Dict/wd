@@ -1,16 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <Diccionario>
-        <Palabra Idioma='es-MX' Dificultad='1'>
-            <Titulo>Gerónimo</Titulo>
-            <Opciones>
-                <Opcion1>absense</Opcion1>
-                <Opcion2>absance</Opcion2>
-            </Opciones>
-        </Palabra>
-		<Palabra Idioma='es-MX' Dificultad='1'>
-            <Titulo>Esconce</Titulo>
-            <Opciones>
-                <Opcion1>absense</Opcion1>
-                <Opcion2>absance</Opcion2>
-            </Opciones>
-        </Palabra>
- </Diccionario>
+
+
+ <Palabra>
+    <Nombre>Imaginación</Nombre>
+    <Dificultad>1</Dificultad>
+    <Puntos>10</Puntos>
+    <Idioma>es-MX</Idioma>
+	<Posicion>9</Posicion>
+ </Palabra> 
+  
+ <Palabra>
+    <Nombre>Abstención</Nombre>
+    <Dificultad>2</Dificultad>
+    <Puntos>20</Puntos>
+    <Idioma>es-MX</Idioma>
+	<Posicion>9</Posicion>
+ </Palabra> 
+ 
+  <Palabra>
+    <Nombre>Powerful</Nombre>
+    <Dificultad>1</Dificultad>
+    <Puntos>10</Puntos>
+    <Idioma>en-US</Idioma>
+	<Posicion>6</Posicion>
+ </Palabra>
+
+  <Palabra>
+    <Nombre>Exhale</Nombre>
+    <Dificultad>2</Dificultad>
+    <Puntos>20</Puntos>
+    <Idioma>en-US</Idioma>
+	<Posicion>6</Posicion>
+ </Palabra>
+ 
+   <Palabra>
+    <Nombre>Period</Nombre>
+    <Dificultad>1</Dificultad>
+    <Puntos>20</Puntos>
+    <Idioma>en-US</Idioma>
+	<Posicion>6</Posicion>
+ </Palabra>
+
+</Diccionario>

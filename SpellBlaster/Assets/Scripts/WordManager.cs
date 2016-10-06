@@ -331,11 +331,17 @@ public class WordManager : MonoBehaviour {
 					break;
 			}
 
-			letter.transform.SetParent(positions[i].transform);
 
+
+			letter.transform.SetParent(positions[i].transform);
+			letter.transform.localPosition = Vector3.zero;
+				
 			builtWord.Add(letter);
 
 			i++;
+
+			if (i >= positions.Length)
+				break;
 		}
 
 
@@ -389,16 +395,18 @@ public class WordManager : MonoBehaviour {
 
 		foreach(GameObject g in builtWord)
 		{
-			g.GetComponent<Animation>().Stop();
+			
+			Animation a = g.GetComponent<Animation> ();
+			if (a)
+				a.Stop (); 
 
 			Rigidbody rb = g.AddComponent<Rigidbody>();
 
-			rb.AddForceAtPosition(Vector3.up * 100.0f, Vector3.zero);
+			if(rb)
+				rb.AddForceAtPosition(Vector3.up * 100.0f, Vector3.zero);
 
-
-
-
-			Destroy(g.gameObject, 3.0f);
+			if(g.gameObject)
+				Destroy(g.gameObject, 3.0f);
 			//CleanupPositions();
 		}  
 
