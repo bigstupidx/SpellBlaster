@@ -40,7 +40,7 @@ public class MainPlayer : MonoBehaviour {
 			GameObject bulletShot = (GameObject) Instantiate (bullet, bulletInstancer.transform.position, Quaternion.identity);
 			Rigidbody bulletRigidBody = bulletShot.GetComponent <Rigidbody> ();
 			bulletRigidBody.AddForce ( Vector3.up * bulletSpeed * Time.deltaTime, ForceMode.VelocityChange);
-			Destroy (bulletShot, 5.0f);
+			Destroy (bulletShot, 3.0f);
 		}
 
 

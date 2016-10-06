@@ -10,16 +10,25 @@ public class Letra : MonoBehaviour {
 	public Material NoDamageMat;
 	public Material MediumDamageMat;
 	public Material criticalDamageMat;
+	public Material IsIncorrectMat;
 
 	MeshRenderer meshRenderer;
 
+
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 	
 		meshRenderer = GetComponent<MeshRenderer>();
 		health = maxHealth; 
 	}
-	
+
+
+	void Start()
+	{
+		CheckForDamage();
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -55,12 +64,26 @@ public class Letra : MonoBehaviour {
 		else
 			meshRenderer.material = criticalDamageMat;
 
+		if (!IsCorrect()) meshRenderer.material = IsIncorrectMat;
+		
 
 		if (health <= 0) {
 
 			Destroy (gameObject);
 		
 		}
+	}
+
+	bool _isCorrect = true;
+	public void SetIsCorrect(bool IsCorrect)
+	{
+		_isCorrect = IsCorrect;
+
+	}
+
+	public bool IsCorrect()
+	{
+		return _isCorrect;
 	}
 
 }
