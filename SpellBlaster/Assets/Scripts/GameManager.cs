@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
 
 		}
 			
-		XDocument xDoc = XDocument.Load(@"Assets/Dict/wd");
+		XDocument xDoc = XDocument.Load(@"Assets/wd");
 
 		rows = xDoc.Descendants().Where(
 			d => d.Name == "Palabra"
