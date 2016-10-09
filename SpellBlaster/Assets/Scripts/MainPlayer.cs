@@ -77,51 +77,51 @@ public class MainPlayer : MonoBehaviour {
 
 	void ShipPitch()
 	{
-		MeshRenderer meshRender = GetComponentInChildren<MeshRenderer>();
-		Ray checkLeft = new Ray(meshRender.bounds.center, Vector3.left);
-		Ray checkRight = new Ray(meshRender.bounds.center, Vector3.right);
-		RaycastHit leftLimit;
-		RaycastHit rightLimit;
-		Physics.Raycast(checkLeft,out leftLimit);
-		Physics.Raycast(checkRight,out rightLimit);
-		float distanceToLeft = (meshRender.bounds.center - leftLimit.point).magnitude;
-		float distanceToRight = (meshRender.bounds.center - rightLimit.point).magnitude;
-		
-//		Debug.Log("Distance to left gutter: " + leftLimit.collider.name + " is " + distanceToLeft );
-//		Debug.Log("Distance to right gutter: " + rightLimit.collider.name + " is " + distanceToRight );
+//		MeshRenderer meshRender = GetComponentInChildren<MeshRenderer>();
+//		Ray checkLeft = new Ray(meshRender.bounds.center, Vector3.left);
+//		Ray checkRight = new Ray(meshRender.bounds.center, Vector3.right);
+//		RaycastHit leftLimit;
+//		RaycastHit rightLimit;
+//		Physics.Raycast(checkLeft,out leftLimit);
+//		Physics.Raycast(checkRight,out rightLimit);
+//		float distanceToLeft = (meshRender.bounds.center - leftLimit.point).magnitude;
+//		float distanceToRight = (meshRender.bounds.center - rightLimit.point).magnitude;
 //		
-		//Where center of the ball is
-		Vector3 ballPosition = meshRender.bounds.center;
-		
-		//Where finger is positioned from the camera
-		Ray fingerRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-		
-		//The line between the center of the ball and the finger's position
-		Vector3 offset = fingerRay.origin - ballPosition;
-				
-		//A line from the ball in the direction of the finger's position
-		Debug.DrawRay(ballPosition, offset, Color.green);
-	
-		//Distance between finger and ball
-		float distance = offset.magnitude;
-		
-		//Direction from ball to finger
-		Vector3 direction = offset / distance;
-		
-		//If X is positive, finger is on the right of the ball, if X is negative, finger is on the left
-		Debug.Log(direction.x);
-
-			float x = direction.x;
-			
-			
-		if(x > 0.15 && distanceToRight > 0.18f)
-		{
-			transform.Translate(new Vector3(100.0f * distance / 1000f,0f,0f));			
-		}
-		if(x < -0.15 && distanceToLeft > 0.18f)
-		{
-			transform.Translate(new Vector3(-100.0f * distance / 1000f,0f,0f));
-		}
+////		Debug.Log("Distance to left gutter: " + leftLimit.collider.name + " is " + distanceToLeft );
+////		Debug.Log("Distance to right gutter: " + rightLimit.collider.name + " is " + distanceToRight );
+////		
+//		//Where center of the ball is
+//		Vector3 ballPosition = meshRender.bounds.center;
+//		
+//		//Where finger is positioned from the camera
+//		Ray fingerRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+//		
+//		//The line between the center of the ball and the finger's position
+//		Vector3 offset = fingerRay.origin - ballPosition;
+//				
+//		//A line from the ball in the direction of the finger's position
+//		Debug.DrawRay(ballPosition, offset, Color.green);
+//	
+//		//Distance between finger and ball
+//		float distance = offset.magnitude;
+//		
+//		//Direction from ball to finger
+//		Vector3 direction = offset / distance;
+//		
+//		//If X is positive, finger is on the right of the ball, if X is negative, finger is on the left
+//		Debug.Log(direction.x);
+//
+//			float x = direction.x;
+//			
+//			
+//		if(x > 0.05 && distanceToRight > 0.18f)
+//		{
+//			transform.Translate(new Vector3(10.0f * distance / 1000f,0f,0f));			
+//		}
+//		if(x < -0.05 && distanceToLeft > 0.18f)
+//		{
+//			transform.Translate(new Vector3(-10.0f * distance / 1000f,0f,0f));
+//		}
 		
 	}
 }

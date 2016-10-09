@@ -11,17 +11,12 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour 
 {
+	
+	public SelectionManager.Idioma IdiomaSeleccionado;
+	public SelectionManager.Dificultad DificultadSeleccionada;
+	public SelectionManager.Musica TocarMusica;
+	public SelectionManager.Efectos TocarEfectos;
 
-	public enum Idioma {
-		en_US, es_MX
-	};
-
-	public enum Dificultad {
-		Facil, Medio, Dificil
-	};
-		
-	public Idioma IdiomaSeleccionado;
-	public Dificultad DificultadSeleccionada;
 	public WordManager wordManager;
 
 
@@ -49,7 +44,13 @@ public class GameManager : MonoBehaviour
 			SeleccionarPalabra ();
 			gameStarted = true;
 		}
+
+
+		if(gameStarted)
+		{
 			
+
+		}
 
 
 	}
@@ -64,15 +65,15 @@ public class GameManager : MonoBehaviour
 
 		switch (DificultadSeleccionada) {
 			
-		case Dificultad.Facil:
+		case SelectionManager.Dificultad.Facil:
 			str_dificultad = "1";
 			break;
 
-		case Dificultad.Medio:
+		case SelectionManager.Dificultad.Medio:
 			str_dificultad = "2";
 			break;
 
-		case Dificultad.Dificil:
+		case SelectionManager.Dificultad.Dificil:
 			str_dificultad = "3";
 			break;
 
@@ -87,11 +88,11 @@ public class GameManager : MonoBehaviour
 
 		switch (IdiomaSeleccionado) {
 
-		case Idioma.es_MX:
+		case SelectionManager.Idioma.es_MX:
 			str_idioma = "es-MX";
 			break;
 
-		case Idioma.en_US:
+		case SelectionManager.Idioma.en_US:
 			str_idioma = "en-US";
 			break;
 
@@ -100,8 +101,12 @@ public class GameManager : MonoBehaviour
 			break;
 
 		}
-			
-		XDocument xDoc = XDocument.Load(@"Assets/wd");
+
+		TextAsset ta = Resources.Load("wd") as TextAsset;
+
+
+
+		XDocument xDoc = XDocument.Parse(ta.text);
 
 		rows = xDoc.Descendants().Where(
 			d => d.Name == "Palabra"
