@@ -437,6 +437,10 @@ public class WordManager : MonoBehaviour {
 				}
 			}
 		}
+
+		if (builtWord.Count <= 0) {
+			
+		}
 	}
 
 

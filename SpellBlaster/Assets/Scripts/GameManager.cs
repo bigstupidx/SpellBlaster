@@ -58,13 +58,14 @@ public class GameManager : MonoBehaviour
 	void CheckForWord()
 	{
 
-		if(destroyWord)
+		if(destroyWord || wordManager.builtWord.Count <= 0)
 		{
 			wordManager.DestroyWordInPlay();
 			destroyWord = false;
 
 			SeleccionarPalabra();
 		}
+
 
 	}
 
