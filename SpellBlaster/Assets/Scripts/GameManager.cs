@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
 
 	public WordManager wordManager;
 
-
-
 	// Use this for initialization
 	void Start () {
 	
@@ -48,14 +46,27 @@ public class GameManager : MonoBehaviour
 
 		if(gameStarted)
 		{
-			
+			CheckForWord();
 
 		}
 
 
 	}
 
+	public bool destroyWord;
 
+	void CheckForWord()
+	{
+
+		if(destroyWord)
+		{
+			wordManager.DestroyWordInPlay();
+			destroyWord = false;
+
+			SeleccionarPalabra();
+		}
+
+	}
 
 	IList<XElement>  rows;
 	void InicializarDiccionario()
@@ -117,20 +128,22 @@ public class GameManager : MonoBehaviour
 
 	}	
 
-	void SeleccionarPalabra()
+	public void SeleccionarPalabra()
 	{
 	
 		StringBuilder output = new StringBuilder();
 
 		int i = UnityEngine.Random.Range (0, rows.Count ());
 
-		Debug.Log("Selected word index = " + i);
+		//Debug.Log("Selected word index = " + i);
 
 		XElement xEle = rows[i];	
 		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Nombre"))
 		{
 			output.Append(elemnt.Value);
 		}
+
+		Debug.Log("Selected word: " + output.ToString());
 
 
 		wordManager.SetWordInPlay(output.ToString());

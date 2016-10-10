@@ -367,8 +367,13 @@ public class WordManager : MonoBehaviour {
 	void CleanupPositions()
 	{
 		
-		foreach(LetterPosition lp in positions)
+		//foreach(LetterPosition lp in positions)
+
+		for(int i = 0; i < positions.Length; i++)
+
 		{
+			LetterPosition lp = positions[i];
+
 			Letra l = lp.transform.GetComponentInChildren<Letra> ();
 
 			if(l) 
@@ -380,22 +385,20 @@ public class WordManager : MonoBehaviour {
 	void Update()
 	{
 		
-		if(destroyWord)
-		{
-			DestroyWordInPlay();
-			destroyWord = false;
-		}
 
+
+		CheckDestroyedLetters();
 	}
 
-	public bool destroyWord;
 
-	void DestroyWordInPlay()
+
+	public void DestroyWordInPlay()
 	{
 
-		foreach(GameObject g in builtWord)
+		for(int i = 0; i < builtWord.Count; i++)
 		{
-			
+			GameObject g = builtWord[i];
+
 			Animation a = g.GetComponent<Animation> ();
 			if (a)
 				a.Stop (); 
@@ -411,6 +414,32 @@ public class WordManager : MonoBehaviour {
 		}  
 
 	}
+
+	void CheckDestroyedLetters()
+	{
+		if( builtWord.Count > 0)
+		{
+			//foreach(GameObject g in builtWord)
+			for(int i = 0; i < builtWord.Count; i++)
+			{
+				GameObject g = builtWord[i];
+
+				if(g)
+				{
+					Letra l = g.GetComponent<Letra>();
+
+					if(l)
+						if(l.IsDestroyed) 
+						{
+							builtWord.Remove(g.gameObject);
+							Destroy(g.gameObject);
+						}
+				}
+			}
+		}
+	}
+
+
 
 }
 

@@ -11,6 +11,8 @@ public class Letra : MonoBehaviour {
 	public Material MediumDamageMat;
 	public Material criticalDamageMat;
 	public Material IsIncorrectMat;
+	public bool IsDestroyed;
+
 
 	MeshRenderer meshRenderer;
 
@@ -69,7 +71,7 @@ public class Letra : MonoBehaviour {
 
 		if (health <= 0) {
 
-			Destroy (gameObject);
+			IsDestroyed = true;
 		
 		}
 	}
