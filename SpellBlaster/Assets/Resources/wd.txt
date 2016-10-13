@@ -19,7 +19,7 @@
  </Palabra> 
  
   <Palabra>
-    <Nombre>Powerful</Nombre>
+    <Nombre>Infinite</Nombre>
     <Dificultad>1</Dificultad>
     <Puntos>10</Puntos>
     <Idioma>en-US</Idioma>
@@ -27,15 +27,15 @@
  </Palabra>
 
   <Palabra>
-    <Nombre>Exhale</Nombre>
+    <Nombre>Amazyng</Nombre>
     <Dificultad>2</Dificultad>
     <Puntos>20</Puntos>
     <Idioma>en-US</Idioma>
-	<Posicion>6</Posicion>
+	<Posicion>4</Posicion>
  </Palabra>
  
    <Palabra>
-    <Nombre>Period</Nombre>
+    <Nombre>Acceptible</Nombre>
     <Dificultad>1</Dificultad>
     <Puntos>20</Puntos>
     <Idioma>en-US</Idioma>

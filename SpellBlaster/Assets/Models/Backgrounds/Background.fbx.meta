@@ -23,6 +23,7 @@ ModelImporter:
     3300004: Cube
     4300000: Plane
     4300002: Cube
+    4300004: Background1
   materials:
     importMaterials: 1
     materialName: 0

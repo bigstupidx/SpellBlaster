@@ -22,7 +22,6 @@ C:\Users\MXJUCER\Documents\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.c
 C:\Users\MXJUCER\Documents\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.dll
 C:\Users\MXJUCER\Documents\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.pdb
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
-C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\Assembly-CSharp.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\Assembly-CSharp.pdb
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.dll
@@ -44,4 +43,5 @@ C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBl
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEngine.Networking.xml
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\obj\Debug\Assembly-CSharp.pdb

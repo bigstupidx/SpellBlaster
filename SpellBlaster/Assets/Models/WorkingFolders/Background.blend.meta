@@ -8,17 +8,32 @@ ModelImporter:
     100000: //RootNode
     100002: Cube
     100004: Plane
+    100006: Plane_001
+    100008: Background1
+    100010: BackGround2
     400000: //RootNode
     400002: Cube
     400004: Plane
+    400006: Plane_001
+    400008: Background1
+    400010: BackGround2
     2300000: //RootNode
     2300002: Cube
     2300004: Plane
+    2300006: Plane_001
+    2300008: Background1
+    2300010: BackGround2
     3300000: //RootNode
     3300002: Cube
     3300004: Plane
+    3300006: Plane_001
+    3300008: Background1
+    3300010: BackGround2
     4300000: Plane
     4300002: Cube
+    4300004: Plane_001
+    4300006: Background1
+    4300008: BackGround2
     7400000: Default Take
     9500000: //RootNode
   materials:

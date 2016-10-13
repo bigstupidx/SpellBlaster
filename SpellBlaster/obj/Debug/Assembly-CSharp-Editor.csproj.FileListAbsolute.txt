@@ -2,6 +2,7 @@ C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBl
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\Assembly-CSharp-Editor.pdb
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\nunit.framework.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.Advertisements.dll
+C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.Android.Extensions.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.EditorTestsRunner.dll
 C:\Users\MXJUCER\Documents\Visual Studio 2015\Team Projects\SpellBlaster\SpellBlaster\Temp\bin\Debug\UnityEditor.Graphs.dll

@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 	void CheckForWord()
 	{
 
-		if(destroyWord || wordManager.builtWord.Count <= 0)
+		if(destroyWord || wordManager.builtWord.Count <= 0 || wordManager.wordWrong)
 		{
 			wordManager.DestroyWordInPlay();
 			destroyWord = false;
@@ -116,8 +116,6 @@ public class GameManager : MonoBehaviour
 
 		TextAsset ta = Resources.Load("wd") as TextAsset;
 
-
-
 		XDocument xDoc = XDocument.Parse(ta.text);
 
 		rows = xDoc.Descendants().Where(
@@ -127,27 +125,45 @@ public class GameManager : MonoBehaviour
 		).ToList();
 
 
+
+
+
+
 	}	
+
+
 
 	public void SeleccionarPalabra()
 	{
 	
-		StringBuilder output = new StringBuilder();
+
 
 		int i = UnityEngine.Random.Range (0, rows.Count ());
 
 		//Debug.Log("Selected word index = " + i);
 
 		XElement xEle = rows[i];	
+
+		StringBuilder output = new StringBuilder();
+		int posicionIncorrecta = 0;
+
 		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Nombre"))
 		{
 			output.Append(elemnt.Value);
 		}
 
+
+		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Posicion"))
+		{
+			posicionIncorrecta = Convert.ToInt32 (elemnt.Value);
+		}
+
 		Debug.Log("Selected word: " + output.ToString());
 
 
-		wordManager.SetWordInPlay(output.ToString());
+		wordManager.SetWordInPlay(output.ToString(), posicionIncorrecta);
+
+
 
 	}
 

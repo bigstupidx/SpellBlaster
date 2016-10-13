@@ -103,16 +103,33 @@ public class WordManager : MonoBehaviour {
 
 	public LetterPosition[] positions;
 
-	public void SetWordInPlay(string Value)
+	public WordType myWordType;
+
+	public enum WordType
 	{
+		misspelledSingle, misspelledMultiple, nonExistent
+	}
+
+
+	public bool wordWrong = false;
+	public void SetWordInPlay(string Value, int PosicionIncorrecta)
+	{
+		myWordType = WordType.misspelledSingle;
+
 		wordInPlay = Value;
 
 		builtWord.Clear();
 
+		wordWrong = false;
+
 		int i = 0;
 		foreach(char ch in wordInPlay)
 		{
+
+			#region Search
 			GameObject letter;
+
+
 			switch(ch)
 			{
 				case 'A':
@@ -330,15 +347,22 @@ public class WordManager : MonoBehaviour {
 					letter = Instantiate(J_Mayuscula_Prefab);
 					break;
 			}
-
+			#endregion
 
 
 			letter.transform.SetParent(positions[i].transform);
 			letter.transform.localPosition = Vector3.zero;
-				
+
+			if (i == PosicionIncorrecta) {
+				letter.GetComponent<Letra> ().SetIsCorrect (false);
+			}
+
 			builtWord.Add(letter);
 
 			i++;
+
+
+
 
 			if (i >= positions.Length)
 				break;
@@ -431,7 +455,14 @@ public class WordManager : MonoBehaviour {
 					if(l)
 						if(l.IsDestroyed) 
 						{
+							
+							
 							builtWord.Remove(g.gameObject);
+							
+
+							if (l.IsCorrect() && myWordType== WordType.misspelledSingle)
+								SetWordWrong ();
+
 							Destroy(g.gameObject);
 						}
 				}
@@ -443,7 +474,10 @@ public class WordManager : MonoBehaviour {
 		}
 	}
 
-
+	void SetWordWrong()
+	{
+		wordWrong = true;
+	}
 
 }
 

@@ -15,6 +15,8 @@ public class MainPlayer : MonoBehaviour {
 	public GameObject rightBound;
 	public GameObject leftBound;
 
+	public AudioClip bulletSound;
+
 	Rigidbody rigidBody;
 
 	// Use this for initialization
@@ -40,6 +42,8 @@ public class MainPlayer : MonoBehaviour {
 			GameObject bulletShot = (GameObject) Instantiate (bullet, bulletInstancer.transform.position, Quaternion.identity);
 			Rigidbody bulletRigidBody = bulletShot.GetComponent <Rigidbody> ();
 			bulletRigidBody.AddForce ( Vector3.up * bulletSpeed * Time.deltaTime, ForceMode.VelocityChange);
+
+			AudioSource.PlayClipAtPoint (bulletSound, transform.position);
 			Destroy (bulletShot, 3.0f);
 		}
 
