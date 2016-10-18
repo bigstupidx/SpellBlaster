@@ -61,7 +61,10 @@ public class GameManager : MonoBehaviour
 		if(destroyWord || wordManager.builtWord.Count <= 0 || wordManager.wordWrong)
 		{
 			wordManager.DestroyWordInPlay();
+
 			destroyWord = false;
+
+
 
 			SeleccionarPalabra();
 		}
@@ -73,46 +76,7 @@ public class GameManager : MonoBehaviour
 	void InicializarDiccionario()
 	{
 
-		string str_dificultad;
-
-		switch (DificultadSeleccionada) {
-			
-		case SelectionManager.Dificultad.Facil:
-			str_dificultad = "1";
-			break;
-
-		case SelectionManager.Dificultad.Medio:
-			str_dificultad = "2";
-			break;
-
-		case SelectionManager.Dificultad.Dificil:
-			str_dificultad = "3";
-			break;
-
-		default:
-			str_dificultad = "2";
-			break;
-
-		}
-
-
-		string str_idioma;
-
-		switch (IdiomaSeleccionado) {
-
-		case SelectionManager.Idioma.es_MX:
-			str_idioma = "es-MX";
-			break;
-
-		case SelectionManager.Idioma.en_US:
-			str_idioma = "en-US";
-			break;
-
-		default:
-			str_idioma = "en-US";
-			break;
-
-		}
+		CargarConfiguracion();
 
 		TextAsset ta = Resources.Load("wd") as TextAsset;
 
@@ -120,19 +84,62 @@ public class GameManager : MonoBehaviour
 
 		rows = xDoc.Descendants().Where(
 			d => d.Name == "Palabra"
-			&& d.Descendants().Any(e => (e.Name == "Dificultad" && e.Value == str_dificultad))
-			&& d.Descendants().Any(e => (e.Name == "Idioma" && e.Value == str_idioma))
+			&& d.Descendants().Any(e => (e.Name == "Dificultad" && e.Value == Config_Dificutad))
+			&& d.Descendants().Any(e => (e.Name == "Idioma" && e.Value == Config_Idioma))
 		).ToList();
-
-
-
-
 
 
 	}	
 
+	string Config_Dificutad;
+	string Config_Idioma;
+
+	void CargarConfiguracion()
+	{
+
+		
+
+		switch (DificultadSeleccionada) {
+			
+		case SelectionManager.Dificultad.Facil:
+			Config_Dificutad = "1";
+			break;
+
+		case SelectionManager.Dificultad.Medio:
+			Config_Dificutad = "2";
+			break;
+
+		case SelectionManager.Dificultad.Dificil:
+			Config_Dificutad = "3";
+			break;
+
+		default:
+			Config_Dificutad = "2";
+			break;
+
+		}
 
 
+
+		switch (IdiomaSeleccionado) {
+
+		case SelectionManager.Idioma.es_MX:
+			Config_Idioma = "es-MX";
+			break;
+
+		case SelectionManager.Idioma.en_US:
+			Config_Idioma = "en-US";
+			break;
+
+		default:
+			Config_Idioma = "en-US";
+			break;
+
+		}
+
+	}
+
+	int puntos;
 	public void SeleccionarPalabra()
 	{
 	
@@ -147,23 +154,26 @@ public class GameManager : MonoBehaviour
 		StringBuilder output = new StringBuilder();
 		int posicionIncorrecta = 0;
 
+
 		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Nombre"))
 		{
 			output.Append(elemnt.Value);
 		}
-
 
 		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Posicion"))
 		{
 			posicionIncorrecta = Convert.ToInt32 (elemnt.Value);
 		}
 
+		foreach (XElement elemnt in xEle.Descendants().Where( e => e.Name == "Puntos"))
+		{
+			puntos = Convert.ToInt32 (elemnt.Value);
+		}
+
 		Debug.Log("Selected word: " + output.ToString());
 
 
 		wordManager.SetWordInPlay(output.ToString(), posicionIncorrecta);
-
-
 
 	}
 

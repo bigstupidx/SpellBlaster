@@ -27,7 +27,7 @@
  </Palabra>
 
   <Palabra>
-    <Nombre>Amazyng</Nombre>
+    <Nombre>Amazing</Nombre>
     <Dificultad>2</Dificultad>
     <Puntos>20</Puntos>
     <Idioma>en-US</Idioma>
@@ -35,7 +35,7 @@
  </Palabra>
  
    <Palabra>
-    <Nombre>Acceptible</Nombre>
+    <Nombre>Acceptable</Nombre>
     <Dificultad>1</Dificultad>
     <Puntos>20</Puntos>
     <Idioma>en-US</Idioma>
