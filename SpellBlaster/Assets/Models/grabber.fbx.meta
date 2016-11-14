@@ -13,6 +13,18 @@ ModelImporter:
     100010: Lamp
     100012: Screw
     100014: Tube
+    100016: Armature
+    100018: Bone
+    100020: Bone1
+    100022: Bone1.001
+    100024: Bone1.001_end
+    100026: Bone2
+    100028: Bone2.001
+    100030: Bone2.001_end
+    100032: Bone3
+    100034: Bone3.001
+    100036: Bone3.001_end
+    100038: Tube.001
     400000: Arms
     400002: Body
     400004: Claws
@@ -21,21 +33,43 @@ ModelImporter:
     400010: Lamp
     400012: Screw
     400014: Tube
+    400016: Armature
+    400018: Bone
+    400020: Bone1
+    400022: Bone1.001
+    400024: Bone1.001_end
+    400026: Bone2
+    400028: Bone2.001
+    400030: Bone2.001_end
+    400032: Bone3
+    400034: Bone3.001
+    400036: Bone3.001_end
+    400038: Tube.001
     2300000: Arms
     2300002: Body
     2300004: Claws
     2300006: Screw
     2300008: Tube
+    2300010: Tube.001
     3300000: Arms
     3300002: Body
     3300004: Claws
     3300006: Screw
     3300008: Tube
+    3300010: Tube.001
     4300000: Body
     4300002: Tube
     4300004: Screw
     4300006: Claws
     4300008: Arms
+    4300010: Tube.001
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: Arms
+    13700002: Body
+    13700004: Claws
+    13700006: Screw
+    13700008: Tube.001
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,13 +84,81 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|ArmatureAction
+      takeName: Armature|ArmatureAction
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone1
+        weight: 1
+      - path: Armature/Bone/Bone1/Bone1.001
+        weight: 1
+      - path: Armature/Bone/Bone1/Bone1.001/Bone1.001_end
+        weight: 1
+      - path: Armature/Bone/Bone2
+        weight: 1
+      - path: Armature/Bone/Bone2/Bone2.001
+        weight: 1
+      - path: Armature/Bone/Bone2/Bone2.001/Bone2.001_end
+        weight: 1
+      - path: Armature/Bone/Bone3
+        weight: 1
+      - path: Armature/Bone/Bone3/Bone3.001
+        weight: 1
+      - path: Armature/Bone/Bone3/Bone3.001/Bone3.001_end
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Claws
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Screw
+        weight: 1
+      - path: Tube
+        weight: 1
+      - path: Tube.001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -94,7 +196,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

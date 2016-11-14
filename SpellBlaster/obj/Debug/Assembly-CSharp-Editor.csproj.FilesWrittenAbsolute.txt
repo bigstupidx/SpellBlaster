@@ -31,3 +31,8 @@
 /Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/UnityEditor.iOS.Extensions.dll
+/Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll
+/Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
+/Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
+/Users/JuanCerda/Documents/Mis Proyectos/SpellBlaster/SpellBlaster/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll.mdb

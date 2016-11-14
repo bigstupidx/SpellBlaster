@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 	public SelectionManager.Efectos TocarEfectos;
 
 	public WordManager wordManager;
+	public ScoreManager scoreManager;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
 		gameStarted = false;
 
+		scoreManager.SetScore("01234567890");
 	}
 	
 	// Update is called once per frame
@@ -34,21 +36,24 @@ public class GameManager : MonoBehaviour
 
 	void Update () {
 	
-		timeSinceStart += Time.deltaTime;
 
+		//Iniciar Juego desde conteo 
+		timeSinceStart += Time.deltaTime;
 		if (timeSinceStart > 3.0f && !gameStarted) {
 		
 			InicializarDiccionario ();
 			SeleccionarPalabra ();
 			gameStarted = true;
-		}
 
+			}
 
 		if(gameStarted)
 		{
 			CheckForWord();
 
 		}
+
+
 
 
 	}
@@ -64,10 +69,9 @@ public class GameManager : MonoBehaviour
 
 			destroyWord = false;
 
-
-
 			SeleccionarPalabra();
 		}
+
 
 
 	}
@@ -144,7 +148,7 @@ public class GameManager : MonoBehaviour
 	{
 	
 
-
+		puntos = 0;
 		int i = UnityEngine.Random.Range (0, rows.Count ());
 
 		//Debug.Log("Selected word index = " + i);
@@ -170,7 +174,7 @@ public class GameManager : MonoBehaviour
 			puntos = Convert.ToInt32 (elemnt.Value);
 		}
 
-		Debug.Log("Selected word: " + output.ToString());
+		Debug.Log("Selected word: " + output.ToString() + " Puntos: " + puntos);
 
 
 		wordManager.SetWordInPlay(output.ToString(), posicionIncorrecta);

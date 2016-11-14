@@ -12,6 +12,15 @@ ModelImporter:
     100008: //RootNode
     100010: Screw
     100012: Tube
+    100014: Armature
+    100016: Bone
+    100018: Bone1
+    100020: Bone1_001
+    100022: Bone2
+    100024: Bone2_001
+    100026: Bone3
+    100028: Bone3_001
+    100030: Tube_001
     400000: Arms
     400002: Body
     400004: Claws
@@ -19,6 +28,15 @@ ModelImporter:
     400008: //RootNode
     400010: Screw
     400012: Tube
+    400014: Armature
+    400016: Bone
+    400018: Bone1
+    400020: Bone1_001
+    400022: Bone2
+    400024: Bone2_001
+    400026: Bone3
+    400028: Bone3_001
+    400030: Tube_001
     2300000: Arms
     2300002: Body
     2300004: Claws
@@ -34,8 +52,15 @@ ModelImporter:
     4300004: Screw
     4300006: Claws
     4300008: Arms
+    4300010: Tube_001
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
+    13700000: Arms
+    13700002: Body
+    13700004: Claws
+    13700006: Screw
+    13700008: Tube_001
   materials:
     importMaterials: 1
     materialName: 0

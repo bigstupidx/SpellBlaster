@@ -8,18 +8,20 @@
     <Puntos>10</Puntos>
     <Idioma>es-MX</Idioma>
 	<Posicion>9</Posicion>
+    <sugerencias>c,s</sugerencias>
  </Palabra> 
   
  <Palabra>
-    <Nombre>Abstención</Nombre>
+    <Nombre>Abstensión</Nombre>
     <Dificultad>2</Dificultad>
     <Puntos>20</Puntos>
     <Idioma>es-MX</Idioma>
 	<Posicion>9</Posicion>
+    <sugerencias>c,s</sugerencias>
  </Palabra> 
  
   <Palabra>
-    <Nombre>Infinite</Nombre>
+    <Nombre>Real</Nombre>
     <Dificultad>1</Dificultad>
     <Puntos>10</Puntos>
     <Idioma>en-US</Idioma>
@@ -40,6 +42,7 @@
     <Puntos>20</Puntos>
     <Idioma>en-US</Idioma>
 	<Posicion>6</Posicion>
+
  </Palabra>
 
 </Diccionario>
